@@ -1,0 +1,11 @@
+.logo {
+  @apply flex items-center;
+
+  .topWord {
+@apply text-white block font-light tracking-[0.1em] uppercase;
+  }
+
+  .lowerWord {
+@apply block font-extralight text-sm text-dark-gray tracking-[0.4rem] uppercase;
+  }
+}
