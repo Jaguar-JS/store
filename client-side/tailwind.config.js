@@ -1,16 +1,16 @@
-/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 const constants = {
-
 	primary: '#A40D0D',
 	'dark-primary': '#9C0D0F',
 	white: '#F0E2E3',
 	gray: '#9D9C9D',
 	'dark-gray': '#5D5D5D',
-	black: '#131313'
+	black: '#131313',
+	'black-divider': '#090909'
 }
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./pages/**/*.{js,ts,jsx,tsx}', './app/**/*.{js,ts,jsx,tsx}'],
 	theme: {
@@ -19,6 +19,9 @@ module.exports = {
 			...constants
 		},
 		extend: {
+			fontFamily: {
+				serif: [`var(--font-playfair)`, ...fontFamily.serif],
+			},
 			fontSize: {
 				xs: '0.82rem',
 				sm: '0.98rem',

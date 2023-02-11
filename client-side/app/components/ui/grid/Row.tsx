@@ -16,7 +16,7 @@ const Row: FC<PropsWithChildren<IRow>> = ({
 	return (
 		<div
 			className={cn('w-full grid grid-cols-12', className, {
-				'border-b-2 border-black border-solid': isBorder
+				'border-b-2 border-black-divider border-solid': isBorder
 			})}
 			style={style}
 		>

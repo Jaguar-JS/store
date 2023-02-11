@@ -1,0 +1,7 @@
+.button {
+  @apply relative w-12 h-12 bg-black-divider flex items-center justify-center hover:bg-[#0e0e0e] transition-colors duration-200;
+}
+
+.badge {
+@apply absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center bg-primary font-bold text-[0.7rem] text-white rounded-full p-0.5;
+}

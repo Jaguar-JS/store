@@ -5,7 +5,7 @@ import { axiosClassic } from '@/api/api'
 
 const PRODUCTS = '/products'
 
-export const ProductService = {
+export const productService = {
 	async getProducts() {
 		const { data } = await axiosClassic.get<IProduct[]>(PRODUCTS)
 

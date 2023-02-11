@@ -1,21 +1,23 @@
 import { FC } from 'react'
 
-import styles from './Header.module.scss'
-import HeaderMenu from './menu/HeaderMenu'
-import HeaderLogo from './logo/HeaderLogo'
 import HeaderButtons from '@/layout/header/buttons/HeaderButtons'
 
-function HeaderProfile() {
-	return null
-}
+import Row from '@/ui/grid/Row'
+
+import styles from './Header.module.scss'
+import HeaderLogo from './logo/HeaderLogo'
+import HeaderMenu from './menu/HeaderMenu'
+import HeaderProfile from '@/layout/header/profile/HeaderProfile'
 
 const Header: FC = () => {
 	return (
 		<header className={styles.header}>
-			<HeaderLogo />
-			<HeaderMenu />
-			<HeaderButtons />
-			<HeaderProfile />
+			<Row>
+				<HeaderLogo />
+				<HeaderMenu />
+				<HeaderButtons />
+				<HeaderProfile />
+			</Row>
 		</header>
 	)
 }

@@ -17,7 +17,8 @@ const Home: FC<IProductsPage> = ({ products }) => {
 				className='bg-dark-primary bg-no-repeat bg-center bg-cover'
 				style={{
 					backgroundBlendMode: 'multiply',
-					backgroundImage: 'url(/images/texture.jpg)'
+					backgroundImage: 'url(/images/texture.jpg)',
+					backgroundRepeat: 'repeat'
 				}}
 			>
 				<Column size={7} isPadding={false}>

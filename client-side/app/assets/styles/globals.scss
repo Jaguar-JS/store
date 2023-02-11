@@ -4,12 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
 	@apply bg-black;
 }
 
 body {
-	@apply text-base text-white;
+	@apply text-base font-light tracking-wider text-gray;
 }
 
 .disabled {
@@ -17,4 +18,29 @@ body {
 	cursor: default;
 	text-decoration: none;
 	opacity: 0.2 !important;
+}
+
+.btn-link {
+	@apply relative text-sm uppercase text-white border-b border-white/20 tracking-widest;
+	&::after {
+		content: '';
+		@apply absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gray transition-all duration-300;
+	}
+
+	&:hover::after {
+		@apply w-full;
+	}
+}
+.menu {
+	transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.open-menu {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.close-menu {
+	opacity: 0;
+	transform: scale(0.8);
 }

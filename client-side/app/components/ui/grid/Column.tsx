@@ -25,7 +25,7 @@ const Column: FC<PropsWithChildren<IColumn>> = ({
       className={cn(
         'h-full flex items-center',
         { 'justify-center': isCenter },
-        { 'border-r-2 border-black border-solid': isBorder },
+        { 'border-r-2 border-black-divider border-solid': isBorder },
         { 'p-3': isPadding },
         className
       )}

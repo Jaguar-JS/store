@@ -14,7 +14,7 @@ import storage from 'redux-persist/lib/storage'
 import { cartSlice } from './cart/cart.slice'
 
 const persistConfig = {
-	key: 'xmas-shop',
+	key: 'lorian-shop',
 	storage,
 	whitelist: ['cart']
 }
