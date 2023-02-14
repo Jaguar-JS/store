@@ -1,17 +1,9 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import {
-	FLUSH,
-	PAUSE,
-	PERSIST,
-	PURGE,
-	REGISTER,
-	REHYDRATE,
-	persistReducer,
-	persistStore
-} from 'redux-persist'
+import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
 import { cartSlice } from './cart/cart.slice'
+import { authSlice } from '@/store/auth/auth.slice'
 
 const persistConfig = {
 	key: 'lorian-shop',
@@ -20,7 +12,8 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-	cart: cartSlice.reducer
+	cart: cartSlice.reducer,
+	auth: authSlice.reducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

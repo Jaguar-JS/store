@@ -12,7 +12,7 @@ model User {
   email    String  @unique
   login    String? @unique
   password String
-
+  emailVerified DateTime? @map("email_verified") @db.Date
   avatarPath String  @default("/uploads/avatar/avatar-default.png") @map("avatar_path")
   surname    String?
   role       Role    @default(CLIENT)

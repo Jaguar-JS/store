@@ -5,6 +5,8 @@ import { path } from 'app-root-path'
 import { ProductModule } from './product/product.module'
 import { ReviewModule } from './review/review.module'
 import { PaymentModule } from './payment/payment.module';
+import { AuthModule } from './auth/auth.module'
+
 
 @Module({
 	imports: [
@@ -15,7 +17,8 @@ import { PaymentModule } from './payment/payment.module';
 		ConfigModule.forRoot(),
 		ProductModule,
 		ReviewModule,
-		PaymentModule
+		PaymentModule,
+		AuthModule
 	]
 })
 export class AppModule {}
