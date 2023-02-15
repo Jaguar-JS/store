@@ -3,11 +3,11 @@ import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import { cartSlice } from '../store/cart/cart.slice'
-import { authSlice } from '@/store/auth/auth.slice'
+import * as authActions from '@/store/auth/auth.action'
 
 const rootAction = {
 	...cartSlice.actions,
-	...authSlice.actions
+	...authActions
 }
 
 export const useActions = () => {

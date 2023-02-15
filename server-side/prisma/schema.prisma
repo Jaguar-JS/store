@@ -18,9 +18,8 @@ model User {
   role       Role    @default(CLIENT)
   isAdmin    Boolean @default(false)
   address    Json?
-  favorites  String[]
+  favorites  Product[]
   reviews    Review[]
-  products   Product[]
   Account    Account[]
   Session    Session[]
   createdAt DateTime @default(now()) @map("created_at") @db.Date

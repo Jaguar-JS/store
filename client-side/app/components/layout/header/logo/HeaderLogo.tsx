@@ -12,6 +12,7 @@ const HeaderLogo: FC = () => {
 			<Link href='/' className={styles.logo}>
 				<Image
 					src='/images/logo.svg'
+					priority
 					width={100}
 					height={100}
 					alt='Lorian shop'
